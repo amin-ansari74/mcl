@@ -13,7 +13,7 @@ const RankingsPage = () => {
         <tbody>
           <tr>
             <td>1</td>
-            <td>SL mahfrooz mahalleh</td>
+            <td>SL Mahfrooz Mahalleh</td>
           </tr>
           <tr>
             <td>2</td>
