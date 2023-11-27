@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import SideBar from "./SideBar";
+import Route from "./Route";
+import AccordionPage from "./pages/AccordionPage";
+import DropDownPage from "./pages/DropDownPage";
+import RankingsPage from "./pages/RankingsPage";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container mx-auto grid grid-cols-6 gap-4 mt-4">
+      <SideBar />
+      <div className="col-span-5">
+        <Route path="/">
+          <AccordionPage />
+        </Route>
+        <Route path="/trophies">
+          <DropDownPage />
+        </Route>
+        <Route path="/rankings">
+          <RankingsPage />
+        </Route>
+      </div>
     </div>
   );
 }
